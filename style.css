@@ -1,0 +1,239 @@
+/*Fonts*/
+
+@font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7l.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }  
+
+/*All*/
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: #FFFFFF;
+}
+
+/*Font Style*/
+h1 {
+    color: #B2B0B0;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+/*Container*/
+
+.container {
+    width: 100%;
+}
+
+/*Form*/
+
+.book-fields {
+    display: grid;
+    grid-template-columns: 600px;
+    grid-template-rows: 25px;
+    padding-left: 200px;
+    margin-bottom: 20px;
+    color: #341A04;
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+}
+
+.book-fields input {
+    border: 3px solid transparent;
+    background-color: #F0F0F0;
+    border-radius: 25px;
+    height: 28px;
+    transition: .5s ease all;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+}
+
+.book-fields input:focus {
+    border: 2px solid #341A04;
+    outline: none;
+}
+
+.submit {
+    position: relative;
+    left: 400px;
+    height: 28px;
+    border-radius: 25px;
+    border: none;
+    background-color: #341A04;
+    color: #DDDDDD;
+    width: 20%;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+.submit:hover {
+    background-color: #654321;
+}
+
+/*Book table*/
+
+table {
+    margin-top: 80px;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 20px 0;
+}
+
+td {
+    font-size: 16px;
+}
+
+thead {
+    background-color: #341A04;
+    color: #DDDDDD;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+}
+
+tr:nth-child(even) {
+    background-color: #DDDDDD;
+}
+
+.list {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.delete-btn {
+    border: none;
+    color: #341A04;;
+    border-radius: 12px;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/*Alerts*/
+
+.success {
+    color: #4BB543;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.error {
+    color: #FF0000;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.remove {
+    color: #4BB543;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*Media Queries*/
+
+@media only screen and (max-width: 768px) {
+
+    h1 {
+        font-size: 45px;
+    }
+
+    .book-fields {
+        display: grid;
+        grid-template-columns: 450px;
+        grid-template-rows: 20px;
+        padding-left: 150px;
+        font-size: 16px;
+    }
+
+    .book-fields input {
+        height: 24px;
+        
+    }
+
+    .submit {
+        left: 310px;
+        font-size: 13px;
+    }
+
+    th, td {
+        padding: 15px 0;
+        font-size: 14px;
+        
+    }
+
+    td {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    h1 {
+        font-size: 42px;
+        margin-bottom: 25px;
+    }
+
+    .book-fields {
+        display: grid;
+        grid-template-columns: 370px;
+        grid-template-rows: 23px;
+        padding-left: 5px;
+        font-size: 14px;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+    
+    .book-fields input {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .submit {
+        left: 140px;
+        font-size: 13px;
+        margin-top: 15px;
+    }
+
+    table {
+        margin-top: 40px;      
+    }
+
+    td {
+        font-size: 14px;
+        font-weight: bold;
+    }
+}
